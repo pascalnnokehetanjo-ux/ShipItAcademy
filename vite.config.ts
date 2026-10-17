@@ -9,6 +9,8 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         '@': path.resolve(process.cwd(), './src'),
+        'next/navigation': path.resolve(process.cwd(), './src/shims/next-navigation.ts'),
+        'next/headers': path.resolve(process.cwd(), './src/shims/next-headers.ts'),
       },
     },
     server: {
