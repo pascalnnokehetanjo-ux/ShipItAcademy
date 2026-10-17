@@ -1,0 +1,6 @@
+{
+  "name": "ShipIt Academy",
+  "description": "A step-by-step path from installing your tools to launching your Android app on Google Play.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
