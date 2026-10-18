@@ -48,13 +48,13 @@ export async function middleware(request: NextRequest) {
   const isAuthPage = path === '/login' || path === '/signup';
 
   if (isProtectedPath && !user) {
-    const url = request.nextUrl.clone();
+    const url = new URL(request.nextUrl.toString());
     url.pathname = '/login';
     return NextResponse.redirect(url);
   }
 
   if (isAuthPage && user) {
-    const url = request.nextUrl.clone();
+    const url = new URL(request.nextUrl.toString());
     url.pathname = '/dashboard';
     return NextResponse.redirect(url);
   }

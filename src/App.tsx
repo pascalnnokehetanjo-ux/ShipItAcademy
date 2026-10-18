@@ -468,14 +468,7 @@ export default function App() {
   return (
     <div className={`min-h-screen flex flex-col bg-[var(--bg-main)] text-[var(--text-main)] ${isDarkMode ? 'dark' : ''}`}>
       {isProtected ? (
-        <ProtectedHeader
-          currentPath={currentPath}
-          currentLang={currentLang}
-          onLanguageChange={setCurrentLang}
-          isDarkMode={isDarkMode}
-          onToggleDarkMode={toggleDarkMode}
-          onNavigate={navigate}
-        />
+        <ProtectedHeader fullName="Learner" />
       ) : (
         <PublicHeader
           currentLang={currentLang}
