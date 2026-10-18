@@ -103,6 +103,37 @@ export interface ProjectScreen {
   created_at: string;
 }
 
+export interface Quiz {
+  id: string;
+  module_id: string;
+  title: string;
+  description: string | null;
+  passing_score: number;
+  created_at: string;
+}
+
+export interface QuizQuestion {
+  id: string;
+  quiz_id: string;
+  question_text: string;
+  question_type: string;
+  options: any[];
+  correct_answer: string;
+  explanation: string | null;
+  order_index: number;
+  created_at: string;
+}
+
+export interface QuizAttempt {
+  id: string;
+  user_id: string;
+  quiz_id: string;
+  score: number;
+  passed: boolean;
+  answers: any;
+  created_at: string;
+}
+
 export interface Certificate {
   id: string;
   user_id: string;
@@ -110,3 +141,4 @@ export interface Certificate {
   certificate_code: string;
   issued_at: string;
 }
+
